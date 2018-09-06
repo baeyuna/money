@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>계산기</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<div style="margin: auto; width:540px; padding-top: 200px; padding-bottom: 10px;">
+	<input type="text" placeholder="1주일동안 일한 시간" size="20" id="myTime">시간
+	<input type="text" placeholder="시급" size="10" id="mytimePay">원
+
+	<button id="but1">주휴수당 포함 주급</button>
+	<button id="but2">미포함 주급</button>
+	</div>
+
+
+	<div id="output" style="margin: auto; width:540px;height: 200px; background:pink; color:black; text-align: center; line-height: 200px; font-size: 1.5em;">♡일주일 동안 얼마나 벌었을까♡</div>
+
+	<script type="text/javascript">
+
+		but1.onclick = function () {
+
+			var Pay = myTime.value /40 * 8 * mytimePay.value + myTime.value * 7530;
+			var finalOutput = "당신의 주급은 " + Pay + " 원입니다!";
+
+			output.innerHTML = finalOutput;
+		}
+
+		but2.onclick = function () {
+
+			var Pay = myTime.value * 7530;
+			var finalOutput = "당신의 주급은 " + Pay + " 원입니다!";
+
+			output.innerHTML = finalOutput;
+		}
+	</script>
+</body>
+</html>
+
+
